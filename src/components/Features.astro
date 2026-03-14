@@ -1,0 +1,43 @@
+---
+const features = [
+  {
+    title: 'Быстро и надёжно',
+    description: 'Внедряем решения в срок. Стабильная работа и поддержка после запуска.',
+    icon: '⚡',
+  },
+  {
+    title: 'Понятный процесс',
+    description: 'Прозрачные этапы, регулярная обратная связь. Вы всегда в курсе прогресса.',
+    icon: '📋',
+  },
+  {
+    title: 'Масштабируемость',
+    description: 'Архитектура, которая растёт вместе с вашим бизнесом.',
+    icon: '📈',
+  },
+];
+---
+
+<section id="features" class="py-20 md:py-28 bg-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+        Почему мы
+      </h2>
+      <p class="mt-4 text-lg text-slate-600">
+        Подход, который уже помог десяткам проектов выйти на новый уровень.
+      </p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {features.map((item) => (
+        <div
+          class="relative rounded-2xl border border-slate-200 bg-slate-50/50 p-8 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <span class="text-3xl" aria-hidden="true">{item.icon}</span>
+          <h3 class="mt-4 text-lg font-semibold text-slate-900">{item.title}</h3>
+          <p class="mt-2 text-slate-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

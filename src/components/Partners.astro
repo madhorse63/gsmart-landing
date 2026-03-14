@@ -1,0 +1,30 @@
+---
+const partners = [
+  { name: 'Shell', description: 'As a trusted partner, Shell provides reliable and innovative solutions to keep our operations running smoothly.', logo: 'Shell' },
+  { name: 'Adidas', description: 'Adidas, a global leader in sportswear, has joined forces with us to offer cutting-edge mobile solutions.', logo: 'Adidas' },
+  { name: 'Samsung', description: "Samsung's innovative technology and design expertise are integral to our product ecosystem.", logo: 'Samsung' },
+  { name: 'Nike', description: "Nike's collaboration with us ensures our customers have access to the latest and greatest in mobile tech.", logo: 'Nike' },
+  { name: 'Apple', description: "Apple's commitment to quality and design aligns perfectly with our mission to provide premium repairs.", logo: 'Apple' },
+  { name: 'Google', description: "Google's partnership with us enables us to offer cutting-edge phone software and services.", logo: 'Google' },
+];
+---
+
+<section class="bg-white py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-sm font-medium text-slate-500">Partnering for success</p>
+    <h2 class="mt-2 text-center text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Our Trusted Partners</h2>
+    <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {partners.map((p) => (
+        <article class="flex gap-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-lg font-bold text-slate-700">
+            {p.logo.charAt(0)}
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900">{p.name}</h3>
+            <p class="mt-1 text-sm text-slate-600 line-clamp-3">{p.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

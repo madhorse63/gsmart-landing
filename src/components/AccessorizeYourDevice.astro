@@ -1,0 +1,27 @@
+---
+// White bg, "Quality Phone Repair Services" (salmon), "Accessorize Your Device" (dark), dotted line, 4 cards
+const cards = [
+  { title: 'Durable Phone Protection', desc: "Elevate Your Phone's Style with Armor Film", link: 'Personalize Your Phone' },
+  { title: 'Stylish Phone Cases', desc: "Enhance Your Device's Look with Unique Phone Cases", link: 'Protect Your Investment' },
+  { title: 'Premium Phone', desc: "Elevate Your Phone's Style with Armor Film and Unique Design", link: 'Discover New Possibilities' },
+  { title: 'Personalize Your Phone', desc: "Enhance Your Device's Protection and Style with Our Solutions", link: 'Explore Accessories' },
+];
+---
+
+<section id="products" class="bg-white py-16 md:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-sm font-normal text-accent">Quality Phone Repair Services</p>
+    <h2 class="mt-2 text-center text-3xl font-bold text-copy-dark sm:text-4xl">Accessorize Your Device</h2>
+    <div class="mx-auto mt-12 max-w-4xl border-b border-dotted border-border-light pb-12" />
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {cards.map((card) => (
+        <article class="rounded-lg bg-card p-6 text-center">
+          <div class="mx-auto h-36 w-full rounded-lg bg-gradient-to-br from-slate-200 to-slate-300" />
+          <h3 class="mt-4 text-base font-bold text-copy-dark">{card.title}</h3>
+          <p class="mt-2 text-sm text-copy-light">{card.desc}</p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-link hover:underline">{card.link}</a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
